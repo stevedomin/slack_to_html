@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="elixir-lang Slack group archive">
+    <title>Elixir Slack archive</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Elixir - Slack group message archive</h2>
+      </div>
+
+      <%= content %>
+    </div>
+
+    <footer class="footer">
+      This website was built using <a href="https://github.com/stevedomin/slack_to_html">slack_to_html</a>
+    </footer>
+  </body>
+</html>

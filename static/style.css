@@ -1,0 +1,124 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.container {
+  padding: 8px;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f5f5f5;
+  text-align: center;
+  color: #818a91;
+  margin-top: 30px;
+}
+
+.channels a {
+  padding: 5px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+a {
+  color: #4e2a8e;
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: #4e2a8e;
+}
+
+a:active, a:focus, a:hover {
+  color: #4e2a8e;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.channel-header {
+  margin-bottom: 20px;
+}
+
+.channel-name {
+  margin: 5px 0 5px 0;
+}
+
+.channel-purpose {
+  margin: 5px 0 5px 0;
+  color: #333;
+  font-style: italic;
+}
+
+.channel-year {
+  margin-top: 25px;
+}
+
+.channel-month {
+  padding: 15px 0  5px 0;
+}
+
+.channel-days a {
+  display: inline-block;
+  padding: 0 3px 0 3px;
+}
+
+.messages-date {
+  padding-bottom: 15px;
+}
+
+.messages {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.message {
+  width: 100%;
+  color: #2c2d30;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 4px 0 4px 0;
+  display: inline-flex;
+}
+
+.message-avatar {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 0.2em;
+  margin-right: 0.45em;
+  vertical-align: top;
+}
+
+.message-content {
+  display: inline-block;
+}
+
+.message-username {
+  display: inline;
+  font-weight: bold;
+  color: #2c2d30;
+  line-height: 18px;
+}
+
+.message-timestamp {
+  display: inline;
+  color: #9e9ea6;
+  font-size: 9pt;
+}
+
+.message-body {
+  display: block;
+}

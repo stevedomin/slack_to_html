@@ -1,0 +1,24 @@
+<div>
+  <div class="channel-header">
+    <h3 class="channel-name">#<%= channel["name"] %></h3>
+    <%= if (purpose = channel["purpose"]["value"]) != "" do %>
+      <h4 class="channel-purpose"><%= purpose %></h4>
+    <% end %>
+    <a href="/">Back to channels index</a>
+  </div>
+  <div>
+    <%= for {year, months} <- messages do %>
+      <h3 class="channel-year"><%= year %></h3>
+      <%= for {month, days} <- months do %>
+        <h4 class="channel-month"><%= Timex.Date.month_name(month) %></h4>
+        <div class="channel-days">
+          <%= for {day, _} <- Enum.sort(days, fn {d1, _}, {d2, _} -> d1 < d2 end) do %>
+          <a href="<%= day %>/">
+            <%= String.split(day, "-") |> Enum.at(2) %>
+          </a>
+        <%= end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

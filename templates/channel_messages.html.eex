@@ -1,0 +1,30 @@
+<div>
+  <div class="channel-header">
+    <h3 class="channel-name">#<%= channel["name"] %></h3>
+    <%= if (purpose = channel["purpose"]["value"]) != "" do %>
+      <h4 class="channel-purpose"><%= purpose %></h4>
+    <% end %>
+    <a href="/<%= channel["name"] %>/">Back to #<%= channel["name"] %> index</a>
+  </div>
+
+  <h3 class="messages-date">Archive from <%= Timex.DateFormat.parse!(date,  "%Y-%m-%d", :strftime) |> Timex.DateFormat.format!("%a, %d %b %Y", :strftime) %></h1>
+
+  <div class="messages">
+    <%= for message <- channel["messages"][date] do %>
+      <% text = Mix.Tasks.Slack.Html.cleanup_message(message["text"], channels, users) %>
+      <% user = users[message["user"]] %>
+      <div class="message">
+        <div>
+          <img class="message-avatar" src="<%= user["profile"]["image_72"] %>">
+        </div>
+        <div class="message-content">
+          <span class="message-username"><%= user["name"] %></span>
+          <span class="message-timestamp">
+            <%= String.split(message["ts"], ".") |>  Enum.at(0) |> Timex.DateFormat.parse!("{s-epoch}") |> Timex.DateFormat.format!("%H:%M:%S", :strftime) %> UTC
+          </span>
+          <div class="message-body"><%= text %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

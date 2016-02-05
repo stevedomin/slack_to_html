@@ -27,7 +27,7 @@ defmodule SlackToHTML.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:poison, "~> 1.5"},
+    [{:poison, "~> 2.0"},
      {:timex, "~> 1.0"},
      {:tzdata, "== 0.1.8", override: true}]
   end

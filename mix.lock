@@ -7,7 +7,7 @@
   "idna": {:hex, :idna, "1.0.3"},
   "mimerl": {:hex, :mimerl, "1.0.2"},
   "plug": {:hex, :plug, "1.0.3"},
-  "poison": {:hex, :poison, "1.5.0"},
+  "poison": {:hex, :poison, "2.0.1"},
   "ranch": {:hex, :ranch, "1.2.0"},
   "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"},
   "timex": {:hex, :timex, "1.0.0"},

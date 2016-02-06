@@ -4,5 +4,6 @@ use Mix.Config
 
 config :slack_to_html,
   output_dir: "./output",
-  excluded_channels: ~w(freenode)
+  excluded_channels: ~w(freenode),
+  ga_tracking_id: nil # keep to nil if you don't want GA tracking
 

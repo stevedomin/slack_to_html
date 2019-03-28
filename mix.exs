@@ -29,6 +29,6 @@ defmodule SlackToHTML.Mixfile do
   defp deps do
     [{:poison, "~> 4.0"},
      {:timex, "~> 3.2"},
-     {:tzdata, "== 0.5.19", override: true}]
+     {:tzdata, "== 0.5.20", override: true}]
   end
 end
